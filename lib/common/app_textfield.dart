@@ -4,7 +4,19 @@ import '/common/app_color.dart';
 class AppTextField extends StatelessWidget {
   TextEditingController controller;
   String hint;
-  AppTextField({Key? key, required this.hint, required this.controller}) : super(key: key);
+  Color cursorColor;
+  Color textColor;
+  Color borderColor;
+  Color activeBorderColor;
+  AppTextField({
+    Key? key,
+    required this.hint,
+    required this.controller,
+    this.cursorColor=AppColor.primaryColor,
+    this.borderColor = AppColor.primaryColor,
+    this.activeBorderColor = AppColor.white,
+    this.textColor = AppColor.primaryColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,29 +27,25 @@ class AppTextField extends StatelessWidget {
         }
         return null;
       },
+      cursorColor: cursorColor,
       enableSuggestions: false,
       autocorrect: false,
       style: TextStyle(
-        color: AppColor.primaryColor,
+        color: textColor,
         decoration: TextDecoration.none,
-        ),
+      ),
       controller: controller,
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(width: 2,color: AppColor.primaryColor)
-        ),
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(width: 2, color: borderColor)),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(width: 2,color: Colors.white)
-        ),
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(width: 2, color: activeBorderColor)),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(width: 2,color: Colors.white)
-        ),
-        hintStyle: TextStyle(
-          color: AppColor.primaryColor
-        ),
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(width: 2, color: borderColor)),
+        hintStyle: TextStyle(color: textColor),
         hintText: hint,
       ),
     );

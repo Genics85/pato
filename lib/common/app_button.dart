@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 
 import 'app_color.dart';
+import 'app_text.dart';
 
 class AppButton extends StatelessWidget {
   VoidCallback onTap;
   double width;
   String text;
-  AppButton({Key? key,
-   required this.text, 
-   this.width = 100,
-   required this.onTap
-   }) : super(key: key);
+  Color color;
+  Color textColor;
+  AppButton(
+      {Key? key,
+      required this.text,
+      this.color = AppColor.primaryColor,
+      this.textColor=AppColor.white,
+      this.width = 100,
+      required this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +25,10 @@ class AppButton extends StatelessWidget {
       width: width,
       child: ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColor.primaryColor),
+            backgroundColor: MaterialStateProperty.all(color),
           ),
-          onPressed:onTap,
-          child: Text(text)),
+          onPressed: onTap,
+          child: AppText(text:text,color: textColor,)),
     );
   }
 }
