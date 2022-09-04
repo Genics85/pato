@@ -56,7 +56,8 @@ class _SignUpState extends State<SignUp> {
                     // )
                   )
                   ,
-                  child:Image(image:AssetImage("/assets/images/sign_up_logo.png"))),
+                  // child:Image(image:AssetImage("../../assets/images/signUp.png"))
+                  ),
                   SizedBox(height: 20,),
                 AppTextField(hint: "Name", controller: _name),
                 SizedBox(height: 10,),

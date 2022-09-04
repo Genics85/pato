@@ -17,7 +17,7 @@ class AppTextField extends StatelessWidget {
       },
       enableSuggestions: false,
       autocorrect: false,
-      style: const TextStyle(
+      style: TextStyle(
         color: AppColor.primaryColor,
         decoration: TextDecoration.none,
         ),

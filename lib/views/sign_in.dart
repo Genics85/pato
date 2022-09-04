@@ -48,7 +48,7 @@ class _SignInState extends State<SignIn> {
                         shape: BoxShape.circle,
                         // image: DecorationImage(image:AssetImage("/assets/images/sign_in_logo.png"))
                         ),
-                        child: Image(image: AssetImage("/assets/images/sign_in_png")),
+                        // child: Image(image: AssetImage("../../assets/images/signIn.png")),
                 ),
                 SizedBox(
                   height: 20,

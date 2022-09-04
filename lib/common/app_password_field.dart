@@ -28,7 +28,7 @@ class AppPasswordField extends StatelessWidget {
       obscureText: obscurity,
       enableSuggestions: false,
       autocorrect: false,
-      style: const TextStyle(
+      style: TextStyle(
         color: AppColor.primaryColor,
         decoration: TextDecoration.none,
       ),

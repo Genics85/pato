@@ -14,7 +14,8 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      margin: EdgeInsets.only(bottom: 15),
       width: width,
       child: ElevatedButton(
           style: ButtonStyle(
