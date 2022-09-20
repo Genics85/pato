@@ -16,14 +16,11 @@ class _HistoryPageState extends State<HistoryPage> {
   Widget build(BuildContext context) {
     return Consumer<AppColor>(
       builder: (context, darkMode, child) {
-        Color darkOrange = darkMode.darkmode ? AppColor.orange : AppColor.dark;
-      Color orangeDark = darkMode.darkmode ? AppColor.dark : AppColor.orange;
-      Color orangePrimary =
-          darkMode.darkmode ? AppColor.orange : AppColor.primaryColor;
-      Color darkWhite=darkMode.darkmode?AppColor.dark:AppColor.white;
         return SafeArea(
-            child: Center(
-          child: AppText(text: "History Area"),
+            child: Container(
+              alignment: Alignment.center,
+              color: darkMode.appBackgrounds,
+          child: AppText(text: "History Area",color: darkMode.textFieldTextColor,),
         ));
       },
     );

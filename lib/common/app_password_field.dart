@@ -19,7 +19,7 @@ class AppPasswordField extends StatelessWidget {
       required this.obscurityFun,
       this.cursorColor=AppColor.primaryColor,
       this.borderColor = AppColor.primaryColor,
-      this.activeBorderColor = AppColor.white,
+      this.activeBorderColor = Colors.white,
       this.textColor = AppColor.primaryColor,
       required this.icon})
       : super(key: key);

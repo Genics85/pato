@@ -16,42 +16,39 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Consumer<AppColor>(builder: (context, darkMode, child) {
-      Color darkOrange = darkMode.darkmode ? AppColor.orange : AppColor.dark;
-      Color orangeDark = darkMode.darkmode ? AppColor.dark : AppColor.orange;
-      Color orangePrimary =
-          darkMode.darkmode ? AppColor.orange : AppColor.primaryColor;
-      Color darkWhite=darkMode.darkmode?AppColor.dark:AppColor.white;
       return SafeArea(
         child: Scaffold(
             appBar: AppBar(
               centerTitle: true,
-              iconTheme: IconThemeData(color: darkWhite),
+              iconTheme: IconThemeData(color: darkMode.appBarTextColor),
               title: AppText(
                 text: "Settings",
-                color: darkWhite,
+                color: darkMode.appBarTextColor,
               ),
-              backgroundColor: orangePrimary,
+              backgroundColor: darkMode.appBarColor,
             ),
             body: Container(
-              color: darkMode.darkmode ? AppColor.dark : AppColor.white,
+              color: darkMode.appBackgrounds,
               child: ListView(
                 children: [
                   ListTile(
                     tileColor: Colors.red,
                     leading: Icon(
                       Icons.settings,
-                      color: darkOrange,
+                      color: darkMode.iconsColor,
                     ),
                     title: AppText(
                       text: "Dark mode",
-                      color: darkOrange,
+                      color: darkMode.tileTextColor,
                     ),
                     trailing: Switch(
                       value: darkMode.darkmode,
                       onChanged: (bool value) {
-                        darkMode.changeMode(value);
+                        darkMode.darkmode
+                            ? darkMode.changeToLight(value)
+                            : darkMode.changeToDark(value);
                       },
-                      activeColor: orangePrimary,
+                      activeColor: darkMode.iconsColor,
                     ),
                   )
                 ],

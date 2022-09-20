@@ -33,21 +33,12 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Consumer<AppColor>(builder: (context, darkMode, child) {
-      Color darkOrange = darkMode.darkmode ? AppColor.orange : AppColor.dark;
-      Color orangeDark = darkMode.darkmode ? AppColor.dark : AppColor.orange;
-      Color orangePrimary =
-          darkMode.darkmode ? AppColor.orange : AppColor.primaryColor;
-      Color darkWhite = darkMode.darkmode ? AppColor.dark : AppColor.white;
-      Color primaryOrange =
-          darkMode.darkmode ? AppColor.primaryColor : AppColor.orange;
-      Color whiteDark = darkMode.darkmode ? AppColor.white : AppColor.dark;
-
-
+     
       return Scaffold(
           body: SafeArea(
         child: Center(
           child: Container(
-            color: darkWhite,
+            color: darkMode.appBackgrounds,
             padding: EdgeInsets.all(15),
             child: Form(
               child: Column(
@@ -59,9 +50,9 @@ class _SignInState extends State<SignIn> {
                     decoration: BoxDecoration(
                       color: Colors.grey,
                       shape: BoxShape.circle,
-                      // image: DecorationImage(image:AssetImage("/assets/images/sign_in_logo.png"))
+                      image: DecorationImage(image:AssetImage("assets/images/signIn.png"),fit: BoxFit.cover)
                     ),
-                    // child: Image(image: AssetImage("../../assets/images/signIn.png")),
+                    
                   ),
                   SizedBox(
                     height: 20,
@@ -69,10 +60,10 @@ class _SignInState extends State<SignIn> {
                   AppTextField(
                     hint: "Email",
                     controller: _email,
-                    borderColor: orangePrimary,
-                    activeBorderColor: darkWhite,
-                    textColor: orangePrimary,
-                    cursorColor: orangePrimary,
+                    borderColor: darkMode.textFieldColor,
+                    activeBorderColor: darkMode.textFieldColor,
+                    textColor: darkMode.textFieldTextColor,
+                    cursorColor: darkMode.textFieldTextColor,
                   ),
                   SizedBox(
                     height: 20,
@@ -81,15 +72,15 @@ class _SignInState extends State<SignIn> {
                     hint: "Password",
                     controller: _password,
                     obscurityFun: obscurityFun,
-                    textColor: orangePrimary,
-                    borderColor: orangePrimary,
-                    activeBorderColor: darkWhite,
-                    cursorColor:orangePrimary,
+                    textColor: darkMode.textFieldTextColor,
+                    borderColor: darkMode.textFieldColor,
+                    activeBorderColor: darkMode.textFieldColor,
+                    cursorColor:darkMode.textFieldTextColor,
                     obscurity: obscurity,
                     
                     icon: obscurity
-                        ? Icon(Icons.visibility_off,color: orangePrimary,)
-                        : Icon(Icons.visibility,color: orangePrimary
+                        ? Icon(Icons.visibility_off,color: darkMode.textFieldIconColor,)
+                        : Icon(Icons.visibility,color: darkMode.textFieldIconColor
                         ,),
                   ),
                   SizedBox(
@@ -97,8 +88,8 @@ class _SignInState extends State<SignIn> {
                   ),
                   AppButton(
                       text: "Sign In",
-                      textColor: darkWhite,
-                      color: orangePrimary,
+                      textColor: darkMode.buttonTextColor,
+                      color: darkMode.buttonColor,
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => Status()));
@@ -111,7 +102,7 @@ class _SignInState extends State<SignIn> {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => SignUp()));
                     },
-                    child: AppText(text: "Sign Up",color: whiteDark,),
+                    child: AppText(text: "Sign Up",color: darkMode.textFieldTextColor,),
                   )
                 ],
               ),

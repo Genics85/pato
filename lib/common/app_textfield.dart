@@ -14,7 +14,7 @@ class AppTextField extends StatelessWidget {
     required this.controller,
     this.cursorColor=AppColor.primaryColor,
     this.borderColor = AppColor.primaryColor,
-    this.activeBorderColor = AppColor.white,
+    this.activeBorderColor =Colors.white,
     this.textColor = AppColor.primaryColor,
   }) : super(key: key);
 

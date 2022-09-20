@@ -37,23 +37,13 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Consumer<AppColor>(builder:(context,darkMode,child){
-
-      Color darkOrange = darkMode.darkmode ? AppColor.orange : AppColor.dark;
-      Color orangeDark = darkMode.darkmode ? AppColor.dark : AppColor.orange;
-      Color orangePrimary =
-          darkMode.darkmode ? AppColor.orange : AppColor.primaryColor;
-      Color darkWhite = darkMode.darkmode ? AppColor.dark : AppColor.white;
-      Color primaryOrange =
-          darkMode.darkmode ? AppColor.primaryColor : AppColor.orange;
-      Color whiteDark = darkMode.darkmode ? AppColor.white : AppColor.dark;
-
       return Scaffold(
       body: SafeArea(
           child: Center(
         child: Container(
           alignment: Alignment.center,
           height: MediaQuery.of(context).size.height,
-          color: darkWhite,
+          color: darkMode.appBackgrounds,
           padding: EdgeInsets.all(15),
           child: SingleChildScrollView(
           
@@ -67,61 +57,60 @@ class _SignUpState extends State<SignUp> {
                   width: 170,
                   height: 170,
                   decoration: BoxDecoration(
-                    color: Colors.grey,
+                    color: Colors.white,
                     shape:BoxShape.circle,
-                    // image: DecorationImage(image:AssetImage("/assets/images/sign_up_logo.png")
-                    // )
+                    image: DecorationImage(image:AssetImage("assets/images/signUp.png"),fit: BoxFit.cover
+                    )
                   )
                   ,
-                  // child:Image(image:AssetImage("../../assets/images/signUp.png"))
                   ),
                   SizedBox(height: 20,),
                 AppTextField(hint: "Name",
                     controller: _name,
-                    borderColor: orangePrimary,
-                    activeBorderColor: darkWhite,
-                    textColor: orangePrimary,
-                    cursorColor: orangePrimary,),
+                    borderColor: darkMode.textFieldColor,
+                    activeBorderColor: darkMode.textFieldColor,
+                    textColor: darkMode.textFieldTextColor,
+                    cursorColor: darkMode.textFieldTextColor,),
                 SizedBox(height: 10,),
                 AppTextField(hint: "Email",
                     controller: _email,
-                    borderColor: orangePrimary,
-                    activeBorderColor: darkWhite,
-                    textColor: orangePrimary,
-                    cursorColor: orangePrimary,),
+                    borderColor: darkMode.textFieldColor,
+                    activeBorderColor: darkMode.textFieldColor,
+                    textColor: darkMode.textFieldTextColor,
+                    cursorColor: darkMode.textFieldTextColor,),
                 SizedBox(height: 10,),
                 AppPasswordField(
                     hint: "Password",
                     controller: _password,
                     obscurityFun: obscurityFun,
-                    textColor: orangePrimary,
-                    borderColor: orangePrimary,
-                    activeBorderColor: darkWhite,
-                    cursorColor:orangePrimary,
+                    textColor: darkMode.textFieldTextColor,
+                    borderColor: darkMode.textFieldColor,
+                    activeBorderColor:darkMode.textFieldColor,
+                    cursorColor:darkMode.textFieldTextColor,
                     obscurity: obscurity,
                     
                     icon: obscurity
-                        ? Icon(Icons.visibility_off,color: orangePrimary,)
-                        : Icon(Icons.visibility,color: orangePrimary
+                        ? Icon(Icons.visibility_off,color: darkMode.textFieldIconColor,)
+                        : Icon(Icons.visibility,color: darkMode.textFieldIconColor
                         ,),),
                 SizedBox(height: 10,),
                 AppPasswordField(
                   hint: "Confirm Password",
                     controller: _confirmPassword,
                     obscurityFun: obscurityFun,
-                    textColor: orangePrimary,
-                    borderColor: orangePrimary,
-                    activeBorderColor: darkWhite,
-                    cursorColor:orangePrimary,
+                    textColor: darkMode.textFieldTextColor,
+                    borderColor: darkMode.textFieldColor,
+                    activeBorderColor:darkMode.textFieldColor,
+                    cursorColor:darkMode.textFieldTextColor,
                     obscurity: obscurity,
                     
                     icon: obscurity
-                        ? Icon(Icons.visibility_off,color: orangePrimary,)
-                        : Icon(Icons.visibility,color: orangePrimary
+                        ? Icon(Icons.visibility_off,color: darkMode.textFieldIconColor,)
+                        : Icon(Icons.visibility,color: darkMode.textFieldIconColor
                         ,),),
                 SizedBox(height: 10,),
-                AppButton(text: "Sign Up", onTap:(){},textColor: darkWhite,
-                      color: orangePrimary,),
+                AppButton(text: "Sign Up", onTap:(){},textColor: darkMode.buttonTextColor,
+                      color: darkMode.buttonColor,),
           
                 SizedBox(
                     height: 20,
@@ -130,7 +119,7 @@ class _SignUpState extends State<SignUp> {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder:(context)=> SignIn()));
                     },
-                    child: AppText(text: "Sign In",color: whiteDark,),
+                    child: AppText(text: "Sign In",color: darkMode.textFieldTextColor,),
                   )
               ],
             )),
