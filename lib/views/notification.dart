@@ -16,11 +16,17 @@ class _NotificationPageState extends State<NotificationPage> {
     return Consumer<AppColor>(
       builder: (context, darkMode, child) {
         return SafeArea(
-            child: Container(
+          child: Scaffold(
+            body: Container(
               color: darkMode.appBackgrounds,
               alignment: Alignment.center,
-          child: AppText(text: "Notification Area",color: darkMode.textFieldTextColor,),
-        ));
+              child: AppText(
+                text: "Notification Area",
+                color: darkMode.textFieldTextColor,
+              ),
+            ),
+          ),
+        );
       },
     );
   }

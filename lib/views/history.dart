@@ -17,10 +17,15 @@ class _HistoryPageState extends State<HistoryPage> {
     return Consumer<AppColor>(
       builder: (context, darkMode, child) {
         return SafeArea(
-            child: Container(
-              alignment: Alignment.center,
-              color: darkMode.appBackgrounds,
-          child: AppText(text: "History Area",color: darkMode.textFieldTextColor,),
+            child: Scaffold(
+          body: Container(
+            alignment: Alignment.center,
+            color: darkMode.appBackgrounds,
+            child: AppText(
+              text: "History Area",
+              color: darkMode.textFieldTextColor,
+            ),
+          ),
         ));
       },
     );
