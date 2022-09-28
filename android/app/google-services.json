@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "431038769560",
-    "project_id": "pato-b7a5c",
-    "storage_bucket": "pato-b7a5c.appspot.com"
+    "project_number": "938220116599",
+    "project_id": "ilarm-c4a28",
+    "storage_bucket": "ilarm-c4a28.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:431038769560:android:8b37843d1bd2fbf40a63ed",
+        "mobilesdk_app_id": "1:938220116599:android:235d6cbe365896b0640472",
         "android_client_info": {
           "package_name": "com.example.state"
         }
       },
       "oauth_client": [
         {
-          "client_id": "431038769560-9eoiele826bhshenl54gac3jfd9dc7sr.apps.googleusercontent.com",
+          "client_id": "938220116599-l1comac0c81tuu01keu6p3vnglsoof0m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD_QbR5eIvwroFBh2O_6Eg-kZjoS5F678E"
+          "current_key": "AIzaSyDRsiDNc__6m0NFJGbJiescCwKXe_Cjk-4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "431038769560-9eoiele826bhshenl54gac3jfd9dc7sr.apps.googleusercontent.com",
+              "client_id": "938220116599-l1comac0c81tuu01keu6p3vnglsoof0m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

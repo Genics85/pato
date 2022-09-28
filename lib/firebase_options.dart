@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD_QbR5eIvwroFBh2O_6Eg-kZjoS5F678E',
-    appId: '1:431038769560:android:8b37843d1bd2fbf40a63ed',
-    messagingSenderId: '431038769560',
-    projectId: 'pato-b7a5c',
-    storageBucket: 'pato-b7a5c.appspot.com',
+    apiKey: 'AIzaSyDRsiDNc__6m0NFJGbJiescCwKXe_Cjk-4',
+    appId: '1:938220116599:android:235d6cbe365896b0640472',
+    messagingSenderId: '938220116599',
+    projectId: 'ilarm-c4a28',
+    storageBucket: 'ilarm-c4a28.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAzbA-u-uF_FoXFaergQ16pw34sZGUYoc4',
-    appId: '1:431038769560:ios:6efc45353fda70b20a63ed',
-    messagingSenderId: '431038769560',
-    projectId: 'pato-b7a5c',
-    storageBucket: 'pato-b7a5c.appspot.com',
-    iosClientId: '431038769560-4f6t29qca6okr620s0dl8dfuag5pj6oi.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCj-firzjx69GxgzV0urME6ftoqNxVF0EM',
+    appId: '1:938220116599:ios:c1d0fabaaa5c161e640472',
+    messagingSenderId: '938220116599',
+    projectId: 'ilarm-c4a28',
+    storageBucket: 'ilarm-c4a28.appspot.com',
+    iosClientId: '938220116599-29qdticts9pmirmjijdp35anlgp2okn9.apps.googleusercontent.com',
     iosBundleId: 'com.example.state',
   );
 }
