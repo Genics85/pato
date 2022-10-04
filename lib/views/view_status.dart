@@ -36,15 +36,15 @@ class _StatusState extends State<Status> {
                       MaterialPageRoute(
                           builder: (context) => NotificationPage()));
                 }),
-            AppButton(
-                text: "History",
-                textColor: darkMode.buttonTextColor,
-                color: darkMode.buttonColor,
-                width: 200,
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HistoryPage()));
-                }),
+            // AppButton(
+            //     text: "History",
+            //     textColor: darkMode.buttonTextColor,
+            //     color: darkMode.buttonColor,
+            //     width: 200,
+            //     onTap: () {
+            //       Navigator.push(context,
+            //           MaterialPageRoute(builder: (context) => HistoryPage()));
+            //     }),
             AppButton(
                 text: "Settings",
                 textColor: darkMode.buttonTextColor,
